@@ -1,0 +1,99 @@
+.header {
+  position: fixed;
+  width: 100%;
+  max-width: 1000px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.header__nav {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem; /* 20px x 24px */
+}
+
+/* sm */
+@media (min-width: 640px) {
+  .header__nav {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* .header__logo-img {
+  width: 1.5rem;
+  height: 1.5rem;
+} */
+
+.header__logo-text {
+  font-weight: 600;
+  font-size: 1.125rem; /* text-lg */
+  color: var(--primary-color);
+  user-select: none;
+}
+
+/* MENU */
+
+.nav-menu {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #fff;
+  }
+}
+
+.nav-menu__item {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-menu__item:hover .nav-menu__dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* SIGN UP BUTTON */
+
+.header__signup-button {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header__signup-button {
+    display: block;
+    background: #fff;
+    color: var(--primary-color);
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    padding: 0.5rem 1.25rem;
+    transition: background-color 0.2s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .header__signup-button:hover {
+    background-color: #f3f4f6;
+  }
+}

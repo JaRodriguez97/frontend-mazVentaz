@@ -1,0 +1,129 @@
+/* General container styles */
+.pitch__container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  text-align: center;
+  position: relative;
+}
+
+/* Header styles */
+.pitch__header {
+  margin-bottom: 2rem;
+}
+
+.pitch__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.25;
+}
+
+.pitch__description {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #6b7280;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+/* Carousel styles */
+.pitch__carousel {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.pitch__carousel-fade-left,
+.pitch__carousel-fade-right {
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.pitch__carousel-fade-left {
+  left: 0;
+  background: linear-gradient(to right, white 0%, transparent 100%);
+}
+
+.pitch__carousel-fade-right {
+  right: 0;
+  background: linear-gradient(to left, white 0%, transparent 100%);
+}
+
+.pitch__carousel-images {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  max-width: 80%;
+  justify-content: center;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+}
+
+.pitch__carousel-item {
+  flex-shrink: 0;
+}
+
+.pitch__carousel-image {
+  width: 8rem;
+  height: 12rem;
+  border-radius: 1rem;
+  object-fit: cover;
+  opacity: 1;
+  scroll-snap-align: center;
+}
+
+.pitch__carousel-image--faded-left {
+  opacity: 0.3;
+}
+
+.pitch__carousel-image--faded-right {
+  opacity: 0.3;
+}
+
+/* Scrollbar styles */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Navigation button styles */
+.pitch__carousel-nav {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.pitch__carousel-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid #d1d5db;
+  color: #4b5563;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.pitch__carousel-button--prev:hover,
+.pitch__carousel-button--next:hover {
+  background-color: #f3f4f6;
+}

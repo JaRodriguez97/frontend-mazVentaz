@@ -1,0 +1,29 @@
+<main class="hero">
+  <figure class="hero__image">
+    <img
+      alt="Mountain range with sunset sky and fog in the valley"
+      class="hero__image-content"
+      height="600"
+      src="../../../assets/images/imageBg.png"
+      width="1590"
+    />
+  </figure>
+
+  <img
+    *ngFor="let i of [1, 2, 3, 4, 5, 6, 7]"
+    class="hero__cloud"
+    [ngClass]="'hero__cloud--' + i"
+    [src]="'../../../assets/images/nube' + i + '.png'"
+    alt=""
+  />
+
+  <img src="../../../assets/images/avion.png" class="hero__plane" alt="" />
+
+  <h1 class="hero__title">
+    Eleva El Nivel De Tus Ventas <strong>MaZ VentaZ</strong>
+  </h1>
+
+  <!-- acomodar nubes inferiores, analizar posibilidad rápida de responsive, solo ajustando tamaños y posiiones, crear repositorio y subir -->
+</main>
+
+<section class="hero-overlay" style="mix-blend-mode: normal">Soluciones que escalan con precisión su marca</section>
