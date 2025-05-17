@@ -27,6 +27,7 @@
   border-color: currentColor;
   font-family: sans-serif;
   scroll-behavior: smooth;
+  scroll-padding-top: 2em;
 }
 
 /* Tipografía por defecto */
@@ -42,6 +43,20 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--secondary-color-opacity);
+}
+
 /* Encabezados sin estilos predeterminados */
 h1,
 h2,
@@ -51,7 +66,7 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: inherit;
-  color: inherit;
+  color: var(--primary-color);
 }
 
 /* Listas sin estilos */
@@ -110,6 +125,7 @@ a {
 p {
   color: inherit;
   text-wrap: pretty;
+  font-size: clamp(1rem, 1.3vw, 1.8rem);
 }
 
 strong {
